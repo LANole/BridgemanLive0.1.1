@@ -1,4 +1,4 @@
-var Bridgeman = angular.module('Bridgeman', ['ngRoute']);
+var Bridgeman = angular.module('Bridgeman', ['ngRoute', 'ngMessages']);
 
 	Bridgeman.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider){
 			$httpProvider.interceptors.push(function($q, $location){									

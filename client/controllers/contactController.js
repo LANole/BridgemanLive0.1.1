@@ -5,4 +5,6 @@ Bridgeman.controller('contactController', ['$scope', 'ContactFactory', '$locatio
 			$location.path('about');
 		})
 	}
+
+	
 }])

@@ -1,11 +1,11 @@
 <div class="container" ng-controller="contactController">
 
-	<form class="well form-horizontal" ng-submit="createContact(newContact)"  id="contact_form">
+	<form class="well form-horizontal" ng-submit="createContact(newContact)"  id="contact_form" name='frm'>
 		<fieldset>
 
 			<!-- Form Name -->
 			<div class="row">
-			  <legend class="text-center">Contact Me Today!</legend>
+			  <legend class="text-center">Contact Me Today or Tomorrow... NO PRESSURE!</legend>
 		    </div>
 
 			<!-- Text input-->
@@ -15,7 +15,10 @@
 			  	<div class="col-md-4 inputGroupContainer">
 			  	  <div class="input-group">
 					  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-					  <input name="first_name" placeholder="First Name" class="form-control" type="text" ng-model="newContact.first_name">
+					  <input name="first_name" placeholder="First Name" class="form-control" type="text" ng-model="newContact.first_name" ng-minlength="3" required>
+					  	<div class="field-message" ng-messages="frm.first_name.$error" ng-if='frm.first_name.$touched' ng-cloak>					    
+					  	  <div ng-message="required">A first name is required</div>					  	
+					    </div>
 			      </div>
 			    </div>
 			</div>
@@ -27,7 +30,11 @@
 			    <div class="col-md-4 inputGroupContainer">
 			      <div class="input-group">
 			  		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-			  		<input name="last_name" placeholder="Last Name" class="form-control" type="text" ng-model="newContact.last_name">
+			  		<input name="last_name" placeholder="Last Name" class="form-control" type="text" ng-model="newContact.last_name" ng-minlength="3" required>
+			  			<div class="field-message" ng-messages="frm.last_name.$error" ng-if='frm.last_name.$touched' ng-cloak>
+					  	  <div ng-message="required">A last name is required as well...</div>			  	
+					      <div ng-message="minlength">Last name must be at least 3 letters</div>
+					    </div>
 			      </div>
 			    </div>
 			</div>
@@ -38,7 +45,11 @@
 			    <div class="col-md-4 inputGroupContainer">
 			      <div class="input-group">
 			        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-			  		<input name="email" placeholder="E-Mail Address" class="form-control" type="text" ng-model="newContact.email">
+			  		<input name="email" placeholder="E-Mail Address" class="form-control" type="email" ng-model="newContact.email" required>
+			  			<div class="field-message" ng-messages="frm.email.$error" ng-if='frm.email.$touched' ng-cloak>
+					      <div ng-message="required">Yeah... need a valid email</div>
+					      <div ng-message="email">Your email address is invalid</div>				  			
+					    </div>
 			      </div>
 			  	</div>
 			</div>
@@ -51,7 +62,11 @@
 			    <div class="col-md-4 inputGroupContainer">
 			      <div class="input-group">
 			        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-			  		<input name="phone" placeholder="(111)555-1212" class="form-control" type="text" ng-model="newContact.phone">
+			  		<input name="phone" placeholder="(111)555-1212" class="form-control" type="text" ng-model="newContact.phone" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" required>
+			  			<div class="field-message" ng-messages="frm.phone.$error" ng-if='frm.phone.$touched' ng-cloak>
+					  	  <div ng-message="required">A phone number is required</div>
+					  	  <div ng-message="pattern">A 10 digit phone is required</div>					  	
+					  	</div>
 			      </div>
 			  	</div>
 			</div>
@@ -152,7 +167,12 @@
 				  <div class="col-md-4 inputGroupContainer">
 				    <div class="input-group">
 				        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-				  		<input name="zip" placeholder="Zip Code" class="form-control" type="text" ng-model="newContact.zip">
+				  		<input name="zip" placeholder="Zip Code" class="form-control" type="text" ng-model="newContact.zip" ng-minlength="5" ng-maxlength="5" required>
+				  		<div class="field-message" ng-messages="frm.zip.$error" ng-if='frm.zip.$touched' ng-cloak>
+					  	  <div ng-message="required">A zip code is required</div>
+					  	  <div ng-message="minlength">Zip must be 5 numbers</div>
+					  	  <div ng-message="maxlength">Zip must be 5 numbers</div>
+					  </div>
 				    </div>
 				</div>
 			</div>
@@ -188,7 +208,12 @@
 			    <div class="col-md-4 inputGroupContainer">
 			      <div class="input-group">
 			        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-			        	<textarea class="form-control" name="description" placeholder="Comment or Project Description" ng-model="newContact.description"></textarea>
+			        	<textarea type="text" class="form-control" name="description" placeholder="Comment or Project Description" ng-model="newContact.description" ng-minlength="50" ng-maxlength="1000" required></textarea>
+			        	<div class="field-message" ng-messages="frm.description.$error" ng-if='frm.description.$dirty' ng-cloak>
+					  		<div ng-message="required">You gotta tell me something...</div>
+					  		<div ng-message="minlength">Message must be over 50 characters</div>
+					  		<div ng-message="maxlength">Message must not exceed 1000 characters</div>		  	
+					  	</div>
 				  </div>
 				</div>
 			</div>
@@ -200,7 +225,7 @@
 			<div class="form-group">
 			  <label class="col-md-4 control-label"></label>
 			  <div class="col-md-4">
-			    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+			    <button type="submit" class="btn btn-warning" ng-disable="frm.$invalid">Send <span class="glyphicon glyphicon-send"></span></button>
 			  </div>
 			</div>
 
