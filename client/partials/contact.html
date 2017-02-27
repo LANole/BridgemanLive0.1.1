@@ -1,14 +1,10 @@
 <div class="container" ng-controller="contactController">
 
 	<form class="well form-horizontal" ng-submit="createContact(newContact)"  id="contact_form" name='frm'>
-		<fieldset>
-
-			<!-- Form Name -->
+		<fieldset>			
 			<div class="row">
 			  <legend class="text-center">Contact Me Today or Tomorrow... NO PRESSURE!</legend>
-		    </div>
-
-			<!-- Text input-->
+		    </div>		
 
 			<div class="form-group">
 			  <label class="col-md-4 control-label">First Name</label>  
@@ -21,9 +17,7 @@
 					    </div>
 			      </div>
 			    </div>
-			</div>
-
-			<!-- Text input-->
+			</div>			
 
 			<div class="form-group">
 			  <label class="col-md-4 control-label" >Last Name</label> 
@@ -38,8 +32,7 @@
 			      </div>
 			    </div>
 			</div>
-
-			<!-- Text input-->
+			
 			<div class="form-group">
 			  <label class="col-md-4 control-label">E-Mail</label>  
 			    <div class="col-md-4 inputGroupContainer">
@@ -52,10 +45,7 @@
 					    </div>
 			      </div>
 			  	</div>
-			</div>
-
-
-			<!-- Text input-->
+			</div>			
 			       
 			<div class="form-group">
 			  <label class="col-md-4 control-label">Phone #</label>  
@@ -69,9 +59,7 @@
 					  	</div>
 			      </div>
 			  	</div>
-			</div>
-
-			<!-- Text input-->
+			</div>			
 			      
 			<div class="form-group">
 			  <label class="col-md-4 control-label">Address</label>  
@@ -81,9 +69,7 @@
 			  		<input name="address" placeholder="Address" class="form-control" type="text" ng-model="newContact.address">
 			      </div>
 			  	</div>
-			</div>
-
-			<!-- Text input-->
+			</div>			
 			 
 			<div class="form-group">
 			  <label class="col-md-4 control-label">City</label>  
@@ -93,9 +79,7 @@
 				 	  <input name="city" placeholder="city" class="form-control" type="text" ng-model="newContact.city">
 				   </div>
 			    </div>
-			</div>
-
-			<!-- Select Basic -->
+			</div>			
 			   
 			<div class="form-group"> 
 			  <label class="col-md-4 control-label">State</label>
@@ -158,9 +142,7 @@
 				    </select>
 				  </div>
 				</div>
-			</div>
-
-			<!-- Text input-->
+			</div>			
 
 			<div class="form-group">
 				<label class="col-md-4 control-label">Zip Code</label>  
@@ -176,8 +158,7 @@
 				    </div>
 				</div>
 			</div>
-
-			<!-- Text input-->
+			
 			<div class="form-group">
 				<label class="col-md-4 control-label">Website or domain name</label>  
 				   <div class="col-md-4 inputGroupContainer">
@@ -187,8 +168,7 @@
 				    </div>
 				  </div>
 			</div>
-
-			<!-- radio checks -->
+			
 			<div class="form-group">
 			    <label class="col-md-4 control-label">Are you a...</label>
 			      <div class="col-md-4">
@@ -199,9 +179,7 @@
 		                <label><input type="radio" name="job" value="no" ng-model="newContact.job"/>Recruiter</label>
 		            </div>
 		        </div>
-		    </div>
-
-			<!-- Text area -->
+		    </div>		
 			  
 			<div class="form-group">
 			  <label class="col-md-4 control-label">What can I do for you?</label>
@@ -217,11 +195,9 @@
 				  </div>
 				</div>
 			</div>
-
-			<!-- Success message -->
+			
 			<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
-
-			<!-- Button -->
+			
 			<div class="form-group">
 			  <label class="col-md-4 control-label"></label>
 			  <div class="col-md-4">
@@ -234,4 +210,4 @@
 
 <a href="#top" class="back-to-top"> Back to top </a>
 	
-</div><!-- /.container -->
+</div>
