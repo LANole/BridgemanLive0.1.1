@@ -14,7 +14,7 @@ var Bridgeman = angular.module('Bridgeman', ['ngRoute', 'ngMessages']);
 			$routeProvider
 				.when('/', {
 					templateUrl:'partials/homepage.html',					
-				}).when('/about/',{
+				}).when('/about/', {
 					templateUrl:'partials/about.html',					
 				}).when('/developer/', {
 					templateUrl: 'partials/developer.html',					
