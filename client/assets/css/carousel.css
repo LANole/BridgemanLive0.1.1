@@ -82,9 +82,10 @@ body {
 /* Featurettes
 ------------------------- */
 
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
+/* Space out the Bootstrap <hr> more */
+/*.featurette-divider {
+  margin: 80px 0;   
+}*/
 
 /* Thin out the marketing headings */
 .featurette-heading {
@@ -96,7 +97,7 @@ body {
 .vcenter {
     display: inline-block;
     vertical-align: middle;
-    float: none;
+    
 }
 
 /* RESPONSIVE CSS
