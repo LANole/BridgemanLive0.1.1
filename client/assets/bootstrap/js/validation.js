@@ -1,6 +1,5 @@
 $(document).ready(function() {
-    $('#contact_form').bootstrapValidator({
-        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+    $('#contact_form').bootstrapValidator({        
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
@@ -10,7 +9,7 @@ $(document).ready(function() {
             first_name: {
                 validators: {
                         stringLength: {
-                        min: 2,
+                        min: 3,
                     },
                         notEmpty: {
                         message: 'Please supply your first name'
@@ -20,7 +19,7 @@ $(document).ready(function() {
              last_name: {
                 validators: {
                      stringLength: {
-                        min: 2,
+                        min: 3,
                     },
                     notEmpty: {
                         message: 'Please supply your last name'

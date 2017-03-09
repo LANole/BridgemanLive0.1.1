@@ -2,8 +2,8 @@ Bridgeman.controller('contactController', ['$scope', 'ContactFactory', '$locatio
 
 	$scope.createContact = function(contact){
 		ContactFactory.createContact(contact, function(res){
-			$location.path('about');
-		})
+			$location.path('/about');
+		}, 5000);
 	}
 
 	
