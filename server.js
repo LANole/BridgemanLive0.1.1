@@ -10,6 +10,10 @@ app.use(bodyParser.json({extended:true}));
 
 app.use(express.static(path.join(__dirname, 'client')));
 
+app.all('/*', function(req, res, next) {			    
+    res.sendFile('index.html', { root: 'client'});
+});
+
 var routes = require('./server/config/routes.js');
 routes(app);
 

@@ -1,6 +1,6 @@
 var Bridgeman = angular.module('Bridgeman', ['ngRoute', 'ngMessages']);
 
-	Bridgeman.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider){
+	Bridgeman.config(['$routeProvider', '$httpProvider', '$locationProvider', function($routeProvider, $httpProvider, $locationProvider){
 			$httpProvider.interceptors.push(function($q, $location){									
 				return{
 					'responseError': function(rejection){
@@ -14,14 +14,15 @@ var Bridgeman = angular.module('Bridgeman', ['ngRoute', 'ngMessages']);
 			$routeProvider
 				.when('/', {
 					templateUrl:'partials/homepage.html',					
-				}).when('/about/', {
+				}).when('/about', {
 					templateUrl:'partials/about.html',					
-				}).when('/developer/', {
+				}).when('/developer', {
 					templateUrl: 'partials/developer.html',					
-				}).when('/contact/', {
+				}).when('/contact', {
 					templateUrl: 'partials/contact.html',
 					controller: 'contactController'
 				}).otherwise({
 					redirectTo:'/'
 				});
+			$locationProvider.html5Mode(true);
 		}])
