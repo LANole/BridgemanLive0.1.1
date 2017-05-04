@@ -1,18 +1,26 @@
-var express = require('express')
+var express = require('express');
+var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var Mailgun = require('mailgun-js');
 var path = require('path');
+require('colors');
 
 var app = express();
 
+
+app.use(favicon(path.join(__dirname, 'client/assets/images', 'tom_bridgeman.ico')))
+
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json({extended:true}));
+app.use(bodyParser.json({extended:true}))
 
 app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static("./bower_components"));
 
-app.all('/*', function(req, res, next) {			    
-    res.sendFile('index.html', { root: 'client'});
-});
+//app.all('/*', function(req, res, next) {			    
+//    res.sendFile('index.html', { root: 'client'});
+//});
+
+require('./server/config/mongoose.js');
 
 var routes = require('./server/config/routes.js');
 routes(app);
@@ -33,5 +41,5 @@ mailgun.messages().send(data, function (error, body) {
 });
 
 app.listen(8000, function () {
-  console.log("I'm listening...");
+  console.log("I'm listening...".blue);
 })

@@ -1,0 +1,67 @@
+<!--<h1>hello <span>{{user.name}}</span></h1>-->
+
+<!-- wall stuff goes here -->
+<!--<div class="input-top">
+  <label>Enter Blog:<textarea ng-model="newBlog.content"></textarea></label>
+  <button ng-click="submitNewBlog()">Submit</button>
+</div>
+
+<div class="messages" ng-repeat="b in blogs">
+
+    <p class="message-content">{{b.content}}</p>
+    <p>- {{b._user.name}}</p>
+
+   <div class="comment" ng-repeat="c in m._comments">
+      <p>{{c.content}}</p>
+      <p>- {{c._user.name}}</p>
+    </div>
+
+    <div class="comment-field">
+      <label>Enter Comment:<textarea ng-model="content"></textarea></label>
+      <button ng-click="submitNewComment(m._id, content)">Submit</button>
+    </div>
+</div>-->
+
+
+<div class="container">	
+  <div class ="row">
+	  <div class ="col-lg-l2">
+	  <h1 class="page-header">
+                Welcome {{user.name}}. Adding a blog today? 
+      </h1>
+      <form>
+      	<input class="form-control" ng-model="newBlog.category" placeholder="category" />	
+	   	  <input class="form-control" ng-model="newBlog.title" placeholder="title" />
+	   	  <textarea class="form-control" ng-model="newBlog.snippet" placeholder="snippet"></textarea>
+	   	  <textarea class="form-control" ng-model="newBlog.content" placeholder="content"></textarea>
+	   	  <button ng-click="submitNewBlog()" class="btn btn-primary">Post</button>
+   	  </form>		
+	  </div>
+  </div>
+
+<hr>
+
+  <div class="row">
+  	<div class="col-lg-8">
+      <div class="blogs" ng-repeat="b in blogs | orderBy:'-createdAt'">
+
+        <hr>
+        <!-- Date/Time -->
+        <p><i class="fa fa-clock-o"></i> Posted on {{b.createdAt | date: "MMM. dd, yyyy"}}</p>
+        <hr>
+
+  	  	<p class="blog-category">{{b.category}}</p>
+
+  	  	<p class="blog-title">{{b.title}}</p>
+
+  	  	<p class="blog-snippet">{{b.snippet}}</p>
+
+  	  	<p class="blog-content">{{b.content}}</p>
+        
+        <p>{{b._user.name}}</p>
+  	  </div>
+  	</div>
+  </div>
+
+    
+</div>

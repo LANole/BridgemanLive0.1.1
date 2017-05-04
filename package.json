@@ -1,19 +1,29 @@
 {
-  "name": "bridgeman",
+  "name": "BridgemanLive0.1.1",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Business consulting and Web Development",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LANole/BLive.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tom Bridgeman",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LANole/BLive/issues"
+  },
+  "homepage": "https://github.com/LANole/BLive#readme",
   "dependencies": {
-    "angular": "^1.6.0",
-    "body-parser": "^1.15.2",
-    "bootstrap": "^3.3.7",
-    "express": "^4.14.0",    
-    "nodemailer": "^2.7.0"
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.1",
+    "bootstrap": "^4.0.0-alpha.6",
+    "express": "^4.15.2",
+    "mailgun-js": "^0.10.1",
+    "serve-favicon": "^2.4.2"
   }
 }
