@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json({extended:true}))
 
 app.use(express.static(path.join(__dirname, 'client')));
-app.use(express.static("./bower_components"));
+//app.use(express.static("./bower_components"));
 
 //app.all('/*', function(req, res, next) {			    
 //    res.sendFile('index.html', { root: 'client'});

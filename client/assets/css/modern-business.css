@@ -5,16 +5,93 @@
  */
 
 /* Global Styles */
+/* font-family: 'Pacifico', cursive;
+font-family: 'Fenix', serif;
+*/
 
 html,
 body {
     height: 100%;
+    background-color: #F3ECE2; /*Island Spice*/
 }
 
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
+h3 {
+    font-family: 'Pacifico', cursive; 
+    color: 
+}
+.mydivider {
+    background-color:#DD4132;
+}
+.navbar {
+    background-color: #DFCFBE; /*Sand Dollar*/
+    border-color: #e7e7e7;
+}
 
+.navbar .navbar-nav > li > a {
+  color: #004B8D; /*Lapis Blue*/
+}
+
+.navbar .navbar-brand {
+  color: #004B8D; /*Lapis Blue*/
+  font-family: 'Pacifico', cursive;  
+}
+
+
+.home-header {
+   font-family: 'Pacifico', cursive; 
+   color: #98DDDE; /*Limpet Shell*/
+}
+
+.page-header {
+    color: #98DDDE; /*Limpet Shell*/
+}
+
+.breadcrumb {
+   background-color: #E2F3EC; /*Clear Day*/
+}
+.panel-default > .panel-heading-custom{
+  background-image: none;
+  background-color: #F5F0E8; /*Romance*/
+}
+.btn-cool1 {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    background-color: #F0E68C; /*Khaki*/
+}
+.btn-cool2 {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    background-color: #F7786B; /*Peach Echo*/
+}
+.btn-cool3 {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    background-color: #8FBC8F; /*DarkSeaGreen*/
+}
+.btn-cool4 {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    background-color: #92B6D5; /*Marina*/
+}
+.style1 {
+    font-family: 'Pacifico', cursive;
+    color: #F0E68C; /*Khaki*/
+}
+.style2 {
+    font-family: 'Pacifico', cursive;
+    color: #F7786B; /*Peach Echo*/
+}
+.style3 {
+    font-family: 'Pacifico', cursive;
+    color: #8FBC8F; /*DarkSeaGreen*/
+}
+.style4 {
+    font-family: 'Pacifico', cursive;
+    color: #92B6D5; /*Marina*/
+}
 .img-portfolio {
     margin-bottom: 30px;
 }
@@ -31,12 +108,21 @@ body {
 .box {
     margin-bottom: 20px;
     padding: 30px 15px;
-    background: #fff;
-    background: rgba(255,255,255,0.9);
+    background: #F3ECE2;    
 }
-
+.blogtitle {
+    font-family: 'Pacifico', cursive;
+    color: #8FBC8F; /*DarkSeaGreen*/
+}
+.well {
+    background-color: #F5F0E8; /*Romance*/
+}
+.well > h4 {
+    font-family: 'Pacifico', cursive; 
+    color: #98DDDE; /*Limpet Shell*/
+}
 a.login {
-    color: white;
+    color: #DFCFBE; /*Sand Dollar*/
 }
 /* Home Page Carousel */
 
@@ -87,6 +173,11 @@ header.carousel .fill {
 
 footer {
     margin: 50px 0;
+}
+
+.footer {
+  background-color: #DFCFBE;
+  border-color: #e7e7e7;  
 }
 
 /* Responsive Styles */

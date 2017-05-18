@@ -9,15 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LANole/BridgemanLive0.1.1
+    "url": "git+https://github.com/LANole/BridgemanLive0.1.1"
   },
+  
   "keywords": [],
   "author": "Tom Bridgeman",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LANole/BLive/issues"
+    "url": "https://github.com/LANole/BridgemanLive0.1.1/issues"
   },
-  "homepage": "https://github.com/LANole/BLive#readme",
+  "homepage": "https://github.com/LANole/BridgemanLive0.1.1#readme",
   "dependencies": {
     "bcrypt": "^1.0.2",
     "body-parser": "^1.17.1",

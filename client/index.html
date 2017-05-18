@@ -14,36 +14,28 @@
     <meta name="googlebot" content="noodp">
     <meta name="msnbot" content="noodp">
     <meta name="slurp" content="noodp, noydir">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' ; connect-src 'self'; img-src * data:; style-src 'self' 'unsafe-inline'; font-src * data:; frame-src https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d44591.890384371676!2d-118.36723983279781!3d33.83006153459027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1492366398808 ">
+    <meta name="Content-Security-Policy: script-src 'self' https://use.fontawesome.com/037d6d1e23.js ">
     
     
     <meta content="/assets/images/Tom_Bridgeman_BigBearSnowTrail.jpg" itemprop="image">
-    <link href="/assests/images/tom_bridgeman.ico" rel="shortcut icon">
+    <link href="/assets/images/tom_bridgeman.ico" rel="shortcut icon">
 
     <base href="/" />
 
     <title>Tom Bridgeman ~ Business Consulting and Web Development</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Fenix|Pacifico" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="assets/css/modern-business.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/037d6d1e23.js"></script>
+    <!--<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
 
-    <script type="text/javascript" src="angular/angular.js"></script>
-    <script type="text/javascript" src="angular-route/angular-route.js"></script>
+    <script src="/assets/angular/angular.js"></script>
+    <script src="/assets/angular/angular-route.min.js"></script>
     <script src="app.js"></script>
-
-    <script src="/factories/ContactFactory.js"></script>
-    <script src="/factories/loginFactory.js"></script>
-    <script src="/factories/blogFactory.js"></script>
-
-    <script src="/controllers/contactController.js"></script>
-    <script src="/controllers/servicesController.js"></script>
-    <script src="/controllers/blogViewController.js"></script>
-    <script src="/controllers/loginController.js"></script>
-    <script src="/controllers/blogController.js"></script>
   
     <base target="_blank">
 </head>
@@ -51,12 +43,20 @@
 <body>
 
     <div ng-include='"templates/header.html"'></div>
-    <div ng-view=""></div>
+    <div class="background" ng-view=""></div>
     <div ng-include='"templates/footer.html"'></div>
 
-    <script type="text/javascript" src="angular/angular.js"></script>
-    <script type="text/javascript" src="angular-route/angular-route.js"></script>
+    
 
+    <script src="/factories/ContactFactory.js"></script>
+    <script src="/factories/loginFactory.js"></script>
+    <script src="/factories/blogFactory.js"></script>
+
+    <script src="/controllers/contactController.js"></script>
+    <script src="/controllers/servicesController.js"></script>
+    <script src="/controllers/blogController.js"></script>
+    <script src="/controllers/blogViewController.js"></script>    
+    <script src="/controllers/loginController.js"></script>
     <!-- jQuery -->
     <script src="assets/js/jquery.js"></script>
 

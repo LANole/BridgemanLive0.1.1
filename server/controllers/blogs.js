@@ -17,10 +17,7 @@ module.exports = (function() {
         });
       },
 
-      getOneBlog: function(req, res) {
-        console.log('Rich band aid');
-        if (req.params.id !== 'undefined') {
-        console.log('there was an id', req.params.id); 
+      getOneBlog: function(req, res) {         
         Blog.findOne({_id: req.params.id}).exec(function(err, b) {        //({_id: req.params.id}, function(err,b){})
           if(err){
             console.log('error is', err);
@@ -31,10 +28,7 @@ module.exports = (function() {
             res.json(b);
           }
         });
-       }else {
-        console.log('no id');
-       }
-      },
+       },
 
       addBlog: function(req, res) {
         console.log("===========================".yellow);

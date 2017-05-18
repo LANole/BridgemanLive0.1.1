@@ -1,7 +1,6 @@
  <!-- Page Content -->
     <div class="container">
-
-        <!-- Page Heading/Breadcrumbs -->
+    <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Tom's Blog Home 
@@ -24,17 +23,17 @@
 
                 <!-- Blog Post -->
                 <h2>
-                    <p>{{b.title}}</p>
+                    <p class="blogtitle">{{b.title}}</p>
                 </h2>
                 <p class="lead">
                     by {{b._user.name}} in the {{b.category}} category
                 </p>
                 <p><i class="fa fa-clock-o"></i> Posted on {{b.createdAt | date: "MMM. dd, yyyy"}}</p>
                 <hr>
-                <p>{{b.snippet}}</p>
+                <p class="text-info">{{b.snippet}}</p>
                 <hr>
-                <p>{{b.content}}</p>                
-                <a class="btn btn-primary" ng-href="/blog-post/{{b._id}}"">Read More <i class="fa fa-angle-right"></i></a>
+                <p class="text-info">{{b.content}}</p>                
+                <a class="btn btn-cool3" ng-href="/blog-post/{{b._id}}">Read More <i class="fa fa-angle-right"></i></a>
 
                 <hr>
               </div>                
@@ -105,7 +104,7 @@
                 <!-- Side Widget Well -->
                 <div class="well">
                     <h4>My Blog</h4>
-                    <p>Here is a collection of my genius (ha!) and tech insights. I'm sure sooner than later I will discuss Formula 1 tech but be assured there will be plenty of SEO and various web development tips/tools/tricks. And lets not forget some general business savviness I've learned over the years.</p>
+                    <p class="text-info">Here is a collection of my genius (ha!) and tech insights. I'm sure sooner than later I will discuss Formula 1 tech but be assured there will be plenty of SEO and various web development tips/tools/tricks. And lets not forget some general business savviness I've learned over the years.</p>
                 </div>
             </div>
         </div>
