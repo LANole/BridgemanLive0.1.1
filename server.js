@@ -7,8 +7,9 @@ require('colors');
 
 var app = express();
 
-
 app.use(favicon(path.join(__dirname, 'client/assets/images', 'tom_bridgeman.ico')))
+
+require('./server/config/mongoose.js');
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json({extended:true}))
@@ -20,7 +21,6 @@ app.use(express.static(path.join(__dirname, 'client')));
 //    res.sendFile('index.html', { root: 'client'});
 //});
 
-require('./server/config/mongoose.js');
 
 var routes = require('./server/config/routes.js');
 routes(app);
