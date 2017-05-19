@@ -15,7 +15,7 @@ module.exports = function(app){
         blogs.getAllBlogs(req, res);
     });
 
-    app.get('/blogs/:id', blogs.getOneBlog); 			//app.get('/blogs/:id', blogs.getOneBlog)       
+    app.get('/blogs/:id', blogs.getOneBlog); 			       
     
 
     app.post('/blogs/new', function(req, res) {
