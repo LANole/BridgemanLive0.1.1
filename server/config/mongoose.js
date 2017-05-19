@@ -4,7 +4,7 @@ mongoose.Promise = global.Promise;
 // require the fs module for loading model files
 var fs = require('fs');
 // require path for getting the models path
-//var path = require('path');
+var path = require('path');
 // connect to mongoose!
 mongoose.connect('mongodb://localhost/bliveblogtest');
 // create a variable that points to the path where all of the models live
