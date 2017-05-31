@@ -30,7 +30,7 @@ module.exports = function(app){
 		 
 		var data = {
 		  from: 'Website inquiry <postmaster@sandbox7dedeb0d5d384b6a8ce4f49165204257.mailgun.org>',
-		  to: 'tbridgeman78@gmail.com',
+		  to: 'tombridgemandev@gmail.com',
 		  subject: req.body.full_name+" has sent you a message",
 		  html:
 			  req.body.full_name+" ..."+			  
