@@ -40,6 +40,8 @@ mailgun.messages().send(data, function (error, body) {
   console.log(body);
 });
 
-app.listen(8000, function () {
-  console.log("I'm listening...".blue);
-})
+app.listen(8080, 'http://172.31.12.40');
+
+//app.listen(8080, 'http://172.31.12.40',function () {
+//  console.log("I'm listening...".blue);
+//})
