@@ -25,20 +25,20 @@ app.use(express.static(path.join(__dirname, 'client')));
 var routes = require('./server/config/routes.js');
 routes(app);
 
-var api_key = 'key-2451a2b90a87be616ab68b8f7c8f97ea';
-var domain = 'sandbox7dedeb0d5d384b6a8ce4f49165204257.mailgun.org';
-var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+//var api_key = 'key-2451a2b90a87be616ab68b8f7c8f97ea';
+//var domain = 'sandbox7dedeb0d5d384b6a8ce4f49165204257.mailgun.org';
+//var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
  
-var data = {
-  from: 'Mailgun TEST <postmaster@sandbox7dedeb0d5d384b6a8ce4f49165204257.mailgun.org>',
-  to: 'tombridgemandev@gmail.com',
-  subject: 'Hello',
-  text: 'Testing some Mailgun awesomness!'
-};
- 
-mailgun.messages().send(data, function (error, body) {
-  console.log(body);
-});
+//var data = {
+//  from: 'Mailgun TEST <postmaster@sandbox7dedeb0d5d384b6a8ce4f49165204257.mailgun.org>',
+//  to: 'tombridgemandev@gmail.com',
+//  subject: 'Hello',
+//  text: 'Testing some Mailgun awesomness!'
+//};
+// 
+//mailgun.messages().send(data, function (error, body) {
+//  console.log(body);
+//});
 
 app.listen(8080, '172.31.12.40');
 
