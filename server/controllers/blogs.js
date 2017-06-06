@@ -1,6 +1,4 @@
 var mongoose = require('mongoose');
-
-// Require the model and save it in a variable
 var Blog = mongoose.model('Blog');
 
 module.exports = (function() {
@@ -18,7 +16,7 @@ module.exports = (function() {
       },
 
       getOneBlog: function(req, res) {         
-        Blog.findOne({_id: req.params.id}).exec(function(err, b) {        //({_id: req.params.id}, function(err,b){})
+        Blog.findOne({_id: req.params.id}).exec(function(err, b) {        
           if(err){
             console.log('error is', err);
             console.log("there was an error when getting the blog".red);

@@ -6,28 +6,21 @@ module.exports = function(app){
 	app.post('/reg', function(req, res){
 	users.reg(req, res);
 	});
-
 	app.post('/login', function(req, res){
 	users.login(req, res);
-	});
-	
+	});	
 	app.get('/blogs/all', function(req, res) {
         blogs.getAllBlogs(req, res);
     });
-
-    app.get('/blogs/:id', blogs.getOneBlog); 			       
-    
-
+    app.get('/blogs/:id', blogs.getOneBlog);    
     app.post('/blogs/new', function(req, res) {
         blogs.addBlog(req, res);
     });
-
 	app.post('/contact', function(req,res){
 
 		var api_key = 'key-2451a2b90a87be616ab68b8f7c8f97ea';
 		var domain = 'tombridgeman.com';
-		var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
-		 
+		var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});		 
 		var data = {
 		  from: 'Website inquiry <postmaster@tombridgeman.com>',
 		  to: 'tomb@tombridgeman.com',
@@ -37,8 +30,7 @@ module.exports = function(app){
 			  req.body.phone+" ..."+
 			  req.body.email+" ..."+			  		  
 		  	  req.body.message
-		};
-		 
+		};		 
 		mailgun.messages().send(data, function (error, body) {
 		  console.log(body);
 		  console.log("working...");

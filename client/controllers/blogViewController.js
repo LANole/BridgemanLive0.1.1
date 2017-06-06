@@ -4,7 +4,6 @@ Bridgeman.controller('blogViewController', function($scope, blogFactory, $locati
   $scope.blogs = [];
   $scope.one = [];
 
-
   if ($routeParams.id) {
     blogFactory.getOneBlog($routeParams.id, function(output) {
     $scope.one = output;

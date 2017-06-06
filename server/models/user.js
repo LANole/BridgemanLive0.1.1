@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-
 var UserSchema = new mongoose.Schema({
 	name: {type: String, required: true, minlength: 3},
 	email: {
@@ -16,5 +15,4 @@ var UserSchema = new mongoose.Schema({
 	password: {type: String, required: true, minlength: 4}
 
 }, {timestamp: true});
-
 mongoose.model('User', UserSchema);

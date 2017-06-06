@@ -23,7 +23,6 @@ Bridgeman.controller('loginController', function($scope, loginFactory, $location
 			$scope.error = "passwords do not match!";
 		}
 
-
 		$scope.reg = {}
 	}
 
@@ -45,6 +44,4 @@ Bridgeman.controller('loginController', function($scope, loginFactory, $location
 
 		$scope.login = {}
 	}
-
-
 });

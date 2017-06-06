@@ -1,41 +1,33 @@
-<!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Category: Amazon Web Services
-                    <small>Subheading</small>
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="/blog">Home</a></li>
-                    <li class="active">Category: AWS</li>
-                </ol>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Category: Amazon Web Services
+                <small>Subheading</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/blog">Home</a></li>
+                <li class="active">Category: AWS</li>
+            </ol>
         </div>
-        <!-- /.row -->
-
-        <!-- Blog Post Row -->
-        <div class="row">
-        <hr>
-        <hr>
-          <div class="blogs" ng-repeat="b in blogs | filter: {category:'AWS'} |orderBy:'-createdAt'">
-            <div class="col-md-3 text-center">                
-                <p>{{b.createdAt | date: "MMM. dd, yyyy"}}</p>            
-            </div>
-            <div class="col-md-9">
-                <h3>
-                    <a href="/blog-post/{{b._id}}">{{b.title}}</a>
-                </h3>
-                <p>by {{b._user.name}} </p>
-                <p class="text-info">{{b.snippet}}</p>
-                <!--<p ta-bind ng-model="b.content">{{b.content}}</p> -->
-                <a class="btn btn-primary" href="/blog-post/{{b._id}}">Read More <i class="fa fa-angle-right"></i></a>
-                <hr>
-              <hr>
-            </div>
-          </div>  
-        </div>
-        <!-- /.row -->
-
-        <hr>
     </div>
+    <div class="row">
+    <hr>
+    <hr>
+      <div class="blogs" ng-repeat="b in blogs | filter: {category:'AWS'} |orderBy:'-createdAt'">
+        <div class="col-md-3 text-center">                
+            <p>{{b.createdAt | date: "MMM. dd, yyyy"}}</p>            
+        </div>
+        <div class="col-md-9">
+            <h3>
+                <a href="/blog-post/{{b._id}}">{{b.title}}</a>
+            </h3>
+            <p>by {{b._user.name}} </p>
+            <p class="text-info">{{b.snippet}}</p>
+            <a class="btn btn-primary" href="/blog-post/{{b._id}}">Read More <i class="fa fa-angle-right"></i></a>
+            <hr>
+          <hr>
+        </div>
+      </div>  
+    </div>
+    <hr>
+</div>

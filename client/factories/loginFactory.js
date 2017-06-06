@@ -26,7 +26,5 @@ Bridgeman.factory('loginFactory', function($http) {
 		callback(user);
 	}
 
-
 	return factory;
-
 });

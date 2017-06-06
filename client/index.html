@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="Bridgeman">
-<head>
+ <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,14 +24,11 @@
 
     <title>Tom Bridgeman ~ Business Consulting and Web Development</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Fenix|Pacifico" rel="stylesheet">
-    <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="assets/css/modern-business.css" rel="stylesheet">
-    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fenix|Pacifico" rel="stylesheet">    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="assets/css/modern-business.css" rel="stylesheet">    
     <script src="https://use.fontawesome.com/037d6d1e23.js"></script>
-    <!--<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+    
 
     <script src="/assets/angular/angular.js"></script>
     <script src="/assets/angular/angular-route.min.js"></script>
@@ -41,36 +38,23 @@
     <script src="app.js"></script>
   
     <base target="_blank">
-</head>
+ </head>
 
-<body>
+ <body>
 
     <div ng-include='"templates/header.html"'></div>
     <div class="background" ng-view=""></div>
-    <div ng-include='"templates/footer.html"'></div>
-
-    
+    <div ng-include='"templates/footer.html"'></div>    
 
     <script src="/factories/ContactFactory.js"></script>
     <script src="/factories/loginFactory.js"></script>
     <script src="/factories/blogFactory.js"></script>
-
     <script src="/controllers/contactController.js"></script>
     <script src="/controllers/servicesController.js"></script>
     <script src="/controllers/blogController.js"></script>
     <script src="/controllers/blogViewController.js"></script>    
-    <script src="/controllers/loginController.js"></script>
-    <!-- jQuery -->
-    <script src="assets/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
+    <script src="/controllers/loginController.js"></script>    
+    <script src="assets/js/jquery.js"></script>    
     <script src="assets/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
-    
-    <!--<script src="assets/js/bridgeman.min.js"></script>-->
-    <!--<script src="assets/js/bridgeman.js"></script>-->
-</body>
-
+ </body>
 </html>

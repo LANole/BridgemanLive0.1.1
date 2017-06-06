@@ -1,71 +1,20 @@
-<!-- Page Content -->
-<!--<h1>Login and Reg</h1>
-
-<h3>{{error}}</h3>
-
-<div class="reg">
-  <h4>Register</h4>
-  <label>Name: <input type="text" name="" ng-model="reg.name"></label>
-  <label>Email: <input type="text" name="" ng-model="reg.email"></label>
-  <label>Password: <input type="password" name="" ng-model="reg.password"></label>
-  <label>Confirm Password: <input type="password" name="" ng-model="reg.password_confirm"></label>
-  <button type="button" name="button" ng-click="regUser()">Register</button>
+<div class="container">
+  <h3>{{error}}</h3>		
+  <div class ="row">
+	  <div class ="col-lg-l2">   	
+	   	<form>
+			<fieldset><legend class="panel panel-default text-center">Login</legend>			
+				<label class="">Email
+				<input type="text" ng-model="login.email">
+				</label>
+				<label class="">Password
+				<input type="password" ng-model="login.password">
+				</label>
+				<label>				
+				<button ng-click="loginUser()" class="btn btn-primary">Submit</button>
+				</label>
+			</fieldset>					
+		</form>		
+	  </div>
+  </div>
 </div>
-
-<div class="login">
-  <h4>Login</h4>  
-  <label>Email: <input type="text" name="" ng-model="login.email"></label>
-  <label>Password: <input type="password" name="" ng-model="login.password"></label>  
-  <button type="button" name="button" ng-click="loginUser()">Login</button>
-</div>-->
-
-
-
-
-
-   <div class="container">
-
-		  <h3>{{error}}</h3>
-		
-		  <div class ="row">
-			  <div class ="col-lg-l2">   	
-			   	<form>
-					<fieldset><legend class="panel panel-default text-center">Login</legend>			
-						<label class="">Email
-						<input type="text" ng-model="login.email">
-						</label>
-						<label class="">Password
-						<input type="password" ng-model="login.password">
-						</label>
-						<label>				
-						<button ng-click="loginUser()" class="btn btn-primary">Submit</button>
-						</label>
-					</fieldset>					
-				</form>		
-			  </div>
-		  </div>
-		  <div class ="row">
-			  <div class ="col-lg-l2">   	
-			   	<form>
-					<fieldset><legend class="panel panel-default text-center">Register</legend>			
-						<label class="">Name
-						<input type="text" ng-model="reg.name">
-						</label>
-						<label class="">Email
-						<input type="text" ng-model="reg.email">
-						</label>
-						<label class="">Password
-						<input type="password" ng-model="reg.password">
-						</label>
-						<label class="">Password Confirm
-						<input type="password" ng-model="reg.password_confirm">
-						</label>
-						<label>				
-						<button ng-click="regUser()" class="btn btn-primary">Submit</button>
-						</label>
-					</fieldset>					
-				</form>		
-			  </div>
-		  </div>
-	    
-    </div>

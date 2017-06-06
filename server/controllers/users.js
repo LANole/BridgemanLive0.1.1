@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
-
 var User = mongoose.model('User');
 
 module.exports = (function() {
