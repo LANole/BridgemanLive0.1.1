@@ -1,4 +1,4 @@
-var Bridgeman = angular.module('Bridgeman', ['ngRoute']);
+var Bridgeman = angular.module('Bridgeman', ['ngRoute', 'textAngular']);
 
 	Bridgeman.config(['$routeProvider', '$httpProvider', '$locationProvider', '$qProvider', function($routeProvider, $httpProvider, $locationProvider, $qProvider){
 			$qProvider.errorOnUnhandledRejections(false);

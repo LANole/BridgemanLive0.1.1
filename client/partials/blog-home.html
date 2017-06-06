@@ -29,10 +29,10 @@
                     by {{b._user.name}} in the {{b.category}} category
                 </p>
                 <p><i class="fa fa-clock-o"></i> Posted on {{b.createdAt | date: "MMM. dd, yyyy"}}</p>
-                <hr>
+                <!--<hr>-->
                 <p class="text-info">{{b.snippet}}</p>
-                <hr>
-                <p class="text-info">{{b.content}}</p>                
+                <!--<hr>
+                <p class="text-info" ta-bind ng-model="b.content">{{b.content}}</p> -->                
                 <a class="btn btn-cool3" ng-href="/blog-post/{{b._id}}">Read More <i class="fa fa-angle-right"></i></a>
 
                 <hr>

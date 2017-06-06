@@ -33,7 +33,8 @@
       	<input class="form-control" ng-model="newBlog.category" placeholder="category" />	
 	   	  <input class="form-control" ng-model="newBlog.title" placeholder="title" />
 	   	  <textarea class="form-control" ng-model="newBlog.snippet" placeholder="snippet"></textarea>
-	   	  <textarea class="form-control" ng-model="newBlog.content" placeholder="content"></textarea>
+	   	  <!--<textarea class="form-control" ng-model="newBlog.content" placeholder="content"></textarea> -->
+        <text-angular ng-model="newBlog.content" placeholder="content"></text-angular>
 	   	  <button ng-click="submitNewBlog()" class="btn btn-primary">Post</button>
    	  </form>		
 	  </div>
@@ -56,7 +57,7 @@
 
   	  	<p class="blog-snippet">{{b.snippet}}</p>
 
-  	  	<p class="blog-content">{{b.content}}</p>
+  	  	<p class="blog-content" ta-bind ng-model="b.content">{{b.content}}</p>
         
         <p>{{b._user.name}}</p>
   	  </div>

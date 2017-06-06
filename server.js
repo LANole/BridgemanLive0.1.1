@@ -42,6 +42,6 @@ routes(app);
 
 app.listen(8080, '172.31.12.40');
 
-//app.listen(8080, 'http://172.31.12.40',function () {
+//app.listen(8080, function () {					//'http://172.31.12.40',
 //  console.log("I'm listening...".blue);
 //})

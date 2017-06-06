@@ -23,13 +23,13 @@
 
                 <!-- Blog Post -->
                 <h2>
-                    <p>{{one.title}}</p>
+                    <p class="blogtitle">{{one.title}}</p>
                 </h2>                
                 <p><i class="fa fa-clock-o"></i> Posted on {{one.createdAt | date: "MMM. dd, yyyy"}}</p>
                 <hr>
-                <p>{{one.snippet}}</p>
+                <p class="text-info">{{one.snippet}}</p>
                 <hr>
-                <p>{{one.content}}</p>
+                <p class="text-info" ta-bind ng-model="one.content">{{one.content}}</p>
                 <hr>
               </div>                
 
