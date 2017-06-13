@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'client')));
 var routes = require('./server/config/routes.js');
 routes(app);
 
-//app.listen(8080, '172.31.12.40');
-app.listen(8080, function () {
-  console.log("I'm listening...");
-})
+app.listen(8080, '172.31.12.40');
+//app.listen(8080, function () {
+//  console.log("I'm listening...");
+//})
