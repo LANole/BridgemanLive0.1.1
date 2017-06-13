@@ -16,7 +16,9 @@ var Bridgeman = angular.module('Bridgeman', ['ngRoute', 'textAngular']);
 				.when('/', {
 					templateUrl:'partials/home.html',					
 				}).when('/about', {
-					templateUrl:'partials/about.html',					
+					templateUrl:'partials/about.html',
+				}).when('/testimonial', {
+					templateUrl:'partials/testimonial.html',					
 				}).when('/services', {
 					templateUrl: 'partials/services.html',
 					controller: 'servicesController'
