@@ -40,6 +40,9 @@ var Bridgeman = angular.module('Bridgeman', ['ngRoute', 'textAngular']);
 				}).when('/blogSportsTech', {
 					templateUrl: 'partials/blog-SportsTech.html',
 					controller: 'blogViewController'
+				}).when('/blogTechReview', {
+					templateUrl: 'partials/blog-TechReview.html',
+					controller: 'blogViewController'
 				}).when('/blog-post/:id', {
 					templateUrl: 'partials/blog-post.html',
 					controller: 'blogViewController'					
