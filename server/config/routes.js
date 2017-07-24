@@ -1,6 +1,7 @@
 var users = require('./../controllers/users.js');
 var blogs = require('./../controllers/blogs.js');
 
+
 module.exports = function(app){
 	
 	app.post('/reg', function(req, res){
@@ -18,12 +19,12 @@ module.exports = function(app){
     });
 	app.post('/contact', function(req,res){
 
-		var api_key = '******';
-		var domain = '*******';
+	var api_key = 'key-80cb47b136a1dabbe102149e705de279';
+		var domain = 'tombridgeman.com';
 		var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});		 
 		var data = {
-		  from: 'Website inquiry <******>',
-		  to: '*****',
+		  from: 'Website inquiry <postmaster@tombridgeman.com>',
+		  to: 'tbridgeman78@gmail.com',
 		  subject: req.body.full_name+" has sent you a message",
 		  html:
 			  req.body.full_name+" ..."+			  
@@ -38,6 +39,6 @@ module.exports = function(app){
 		    res.send("Your message has been sent");
 		  else
 		  	res.send("Uh oh... something went wrong!");
-		});
+		});	
 	});
 }

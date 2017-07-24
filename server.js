@@ -1,7 +1,6 @@
 var express = require('express');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
-var Mailgun = require('mailgun-js');
 var path = require('path');
 require('colors');
 
