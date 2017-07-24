@@ -19,15 +19,12 @@
   },
   "homepage": "https://github.com/LANole/BridgemanLive0.1.1#readme",
   "dependencies": {
-    "aws-sdk": "^2.87.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.1",
     "bootstrap": "^4.0.0-alpha.6",
     "express": "^4.15.2",
     "mailgun-js": "^0.10.1",
     "mongoose": "^4.9.6",
-    "nodemailer": "^4.0.1",
-    "nodemailer-ses-transport": "^1.5.1",
     "serve-favicon": "^2.4.2"
   }
 }
