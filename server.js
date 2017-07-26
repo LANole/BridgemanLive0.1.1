@@ -17,7 +17,7 @@ app.all('/*', function(req, res, next) {
     res.sendFile('index.html', { root: 'client'});
 });
 
-app.listen(8080, '172.31.12.40');
-//app.listen(8080, function () {
-//  console.log("I'm listening...".blue);
-//})
+//app.listen(8080, '172.31.12.40');
+app.listen(8080, function () {
+  console.log("I'm listening...".blue);
+})
