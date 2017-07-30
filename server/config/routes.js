@@ -19,12 +19,12 @@ module.exports = function(app){
     });
 	app.post('/contact', function(req,res){
 
-	var api_key = 'key-80cb47b136a1dabbe102149e705de279';
-		var domain = 'tombridgeman.com';
+	var api_key = '';
+		var domain = '';
 		var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});		 
 		var data = {
-		  from: 'Website inquiry <postmaster@tombridgeman.com>',
-		  to: 'tbridgeman78@gmail.com',
+		  from: 'Website inquiry <>',
+		  to: '',
 		  subject: req.body.full_name+" has sent you a message",
 		  html:
 			  req.body.full_name+" ..."+			  
