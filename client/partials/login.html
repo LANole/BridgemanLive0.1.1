@@ -17,4 +17,28 @@
 		</form>		
 	  </div>
   </div>
+
+    <div class ="row">
+	  <div class ="col-lg-l2">   	
+	   	<form>
+			<fieldset><legend class="panel panel-default text-center">Register</legend>
+				<label class="">Name
+				<input type="text" ng-model="reg.name">
+				</label>			
+				<label class="">Email
+				<input type="text" ng-model="reg.email">
+				</label>
+				<label class="">Password
+				<input type="password" ng-model="reg.password">
+				</label>
+				<label class="">Confirm Password
+				<input type="password" ng-model="reg.password_confirm">
+				</label>
+				<label>				
+				<button ng-click="regUser()" class="btn btn-primary">Submit</button>
+				</label>
+			</fieldset>					
+		</form>		
+	  </div>
+  </div>
 </div>
